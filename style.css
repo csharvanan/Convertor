@@ -1,0 +1,82 @@
+body{
+    background-color: antiquewhite;
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.header {
+    height: 10vh;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+.menulist{
+    display: flex;
+    flex: 1;
+        justify-content: center;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.heading {
+    font-size: 2rem;
+}
+.container {
+    width: 400px;
+    border: 1px solid black;
+    margin: 20vh auto 20vh auto;
+    background-color: aquamarine;
+    border-radius: 10px;
+    padding: 15px 15px 15px 15px;
+}
+input {
+    font-size: 1.2em;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px auto 15px auto;
+
+}
+.subhead {
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+.convert-btn {
+    width: 65%;
+    /* margin-left: 15%; */
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: burlywood;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+.reset-btn {
+    width: 32%;
+    /* margin-left: 15%; */
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: burlywood;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+#error {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+#result {
+    text-align: center;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: bolder;
+    padding: 15px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heat Convertor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="header">
+    <ul class="menulist"><a href="index.html">Heat Convertor</a></ul>
+    <ul class="menulist"><a href="length.html">Length Convertor</a></ul>
+    </nav>
+    <div class="container">
+    <h1 class="heading">Heat Convertor <span class="subhead">(Celsius to Fahrenheit)</span></h1>
+
+        <input type="text" id="celcius" name="celcius" placeholder="Enter the value in Celcius">
+        <div id="error"></div>
+        <button class="convert-btn" onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+        <button class="reset-btn" onclick="resetVal()">Reset</button>
+        <div id="result"></div>
+
+    </div>
+    <script>
+        function convertToFahrenheit() {
+            const celciusInput = document.getElementById('celcius');
+            const celciusValue = parseFloat(celciusInput.value);
+            
+            if (isNaN(celciusValue)) {
+                const errorDiv = document.getElementById('error');
+                errorDiv.innerHTML = 'Please enter a valid number for Celcius.';
+                errorDiv.style.color = 'red';
+                return;
+            }
+             else{
+                const errorDiv = document.getElementById('error');
+                errorDiv.innerHTML = '';
+            }
+            
+            
+            const fahrenheitValue = (celciusValue * 9/5) + 32;
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `${celciusValue}°C is equal to ${fahrenheitValue.toFixed(2)}°F.`;
+        }
+        function resetVal() { 
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>
